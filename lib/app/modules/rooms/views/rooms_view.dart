@@ -5,7 +5,11 @@ import 'package:get/get.dart';
 import '../controllers/rooms_controller.dart';
 
 class RoomsView extends GetView<RoomsController> {
-  const RoomsView({Key? key}) : super(key: key);
+  final String nickname;
+
+  RoomsView({required this.nickname});
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -16,7 +20,14 @@ class RoomsView extends GetView<RoomsController> {
       ),
       body: Container(
         width: double.infinity,
-        color: Color.fromRGBO(255, 204, 229, 1),
+        color: Color.fromRGBO(255, 204, 229, 1),child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text('Добро пожаловать, $nickname!', style: TextStyle(color: Colors.white, fontWeight: FontWeight.w400, fontSize: 40),),
+            
+          ],
+        ),
+
         
       ),
     );
