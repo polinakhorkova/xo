@@ -3,12 +3,12 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:xo/app/routes/app_pages.dart';
 
-import '../controllers/home_controller.dart';
+import '../controllers/registr_controller.dart';
 
-class HomeView extends GetView<HomeController> {
-  const HomeView({Key? key}) : super(key: key);
+class RegistrView extends GetView<RegistrController> {
+  const RegistrView({Key? key}) : super(key: key);
   @override
-  Widget build(BuildContext context) {
+ Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: const Text('XO PLAY'),
@@ -22,13 +22,13 @@ class HomeView extends GetView<HomeController> {
           child: Container( 
           
           width: 500,
-          height: 390,
+          height: 340,
           decoration: BoxDecoration(color: Color.fromRGBO(255, 102, 178, 0.4), borderRadius: BorderRadius.circular(20)),
         child: Column(
           
           children: [
             SizedBox(height: 20),
-            Text('Добро пожаловать!', style: TextStyle(color: Colors.white, fontWeight: FontWeight.w500, fontSize: 25),),
+            Text('Зарегистрируйтесь', style: TextStyle(color: Colors.white, fontWeight: FontWeight.w500, fontSize: 25),),
          //SizedBox(height: 20),
          //Text('Зарегистрируйтесь', style: TextStyle(color: Colors.white, fontWeight: FontWeight.w500, fontSize: 25),),
            SizedBox(height: 30),
@@ -81,24 +81,7 @@ class HomeView extends GetView<HomeController> {
                     ),
                   ),),
                     SizedBox(height: 15),
-            TextButton(
-              onPressed: () => Get.toNamed(Routes.REGISTR), 
-              child: 
-              Container(
-               // width:110,
-                height: 50,
-                 padding: EdgeInsets.all(10),
-                child: 
-              Text('Регистрация', style: TextStyle(color: Colors.white, fontWeight: FontWeight.w500, fontSize: 25),),),
-        style: ButtonStyle(
-                  //  backgroundColor: MaterialStateProperty.all<Color>(
-                  //      Color.fromRGBO(255, 102, 178, 1)),
-                    // shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                    //   RoundedRectangleBorder(
-                    //     borderRadius: BorderRadius.circular(10),
-                    //   ),
-                    // ),
-                  ),),
+            
             ],
         ),
         ),
@@ -107,3 +90,4 @@ class HomeView extends GetView<HomeController> {
     );
   }
 }
+
