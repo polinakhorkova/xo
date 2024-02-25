@@ -12,11 +12,11 @@ class PlayView extends GetView<PlayController> {
       appBar: AppBar(
         title: const Text('XO PLAY'),
         centerTitle: true,
-        backgroundColor: Color.fromRGBO(255, 102, 178, 1),
+        backgroundColor: Colors.deepOrange,
       ),
       body: Container(
         width: double.infinity,
-        color: Color.fromRGBO(255, 204, 229, 1),
+        color: Colors.black,
         
       ),
     );

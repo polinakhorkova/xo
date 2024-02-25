@@ -16,18 +16,27 @@ class HomeView extends GetView<HomeController> {
       appBar: AppBar(
         title: const Text('XO PLAY'),
         centerTitle: true,
-        backgroundColor: Color.fromRGBO(255, 102, 178, 1),
+        backgroundColor: Colors.deepOrange,
       ),
       body: Container(
+        
         width: double.infinity,
-        color: Color.fromRGBO(255, 204, 229, 1),
+        color: Colors.black,
         child: Center(
           child: Container(
             width: 500,
             height: 250,
             decoration: BoxDecoration(
-                color: Color.fromRGBO(255, 102, 178, 0.4),
-                borderRadius: BorderRadius.circular(20)),
+            gradient: LinearGradient(
+              begin: Alignment.topCenter,
+              end: Alignment.bottomCenter,
+              colors: [
+                Colors.deepOrange,
+                Colors.pink
+              ],
+            ),borderRadius: BorderRadius.circular(20)
+          ),
+           
             child: Column(
               children: [
                 SizedBox(height: 20),
@@ -115,7 +124,7 @@ class HomeView extends GetView<HomeController> {
                   ),
                   style: ButtonStyle(
                     backgroundColor: MaterialStateProperty.all<Color>(
-                        Color.fromRGBO(255, 102, 178, 1)),
+                        Colors.black),
                     shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                       RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(10),
