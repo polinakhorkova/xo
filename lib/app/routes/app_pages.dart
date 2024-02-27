@@ -28,7 +28,7 @@ class AppPages {
     ),
     GetPage(
       name: _Paths.PLAY,
-      page: () => const PlayView(),
+      page: () =>  PlayView(),
       binding: PlayBinding(),
     ),
     

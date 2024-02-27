@@ -182,7 +182,7 @@ class RoomsView extends GetView<RoomsController> {
                                               padding:
                                                   EdgeInsets.only(right: 30),
                                               child: ElevatedButton(
-                                                onPressed: () {},
+                                                onPressed: () => Get.toNamed(Routes.PLAY),
                                                 child: Container(
                                                   width: 120,
                                                   height: 50,
