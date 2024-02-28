@@ -91,7 +91,15 @@ class _PlayViewState extends State<PlayView> {
                   },
                   child: Container(
                     decoration: BoxDecoration(
-                        border: Border.all(), color: Colors.white),
+            gradient: LinearGradient(
+              begin: Alignment.topCenter,
+              end: Alignment.bottomCenter,
+              colors: [
+                Colors.deepOrange,
+                Colors.pink
+              ],
+            ),borderRadius: BorderRadius.circular(20)
+          ),
                     child: Center(
                       child: Text(board[row][col]),
                     ),
